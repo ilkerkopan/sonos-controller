@@ -81,7 +81,7 @@ def update_volume():
     global last_volume_level
     threading.Timer(0.1, update_volume).start()
     volume = read_volume() 
-    print("Volume is at: "+ str(volume))
+#    print("Volume is at: "+ str(volume))
     first_led = 4
     led_count = 12
     volume_level = int(volume * 11) + 1
@@ -126,5 +126,5 @@ GPIO.add_event_detect(22,GPIO.FALLING,callback=button5_callback)
 #message = input("Press enter to quit\n\n") # Run until someone presses enter
 while True:
     update_volume()
-    time.sleep(1)
+    time.sleep(800)
 GPIO.cleanup() # Clean up

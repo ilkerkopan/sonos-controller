@@ -8,7 +8,7 @@ import random
 
 GPIO.setwarnings(False)
 GPIO.setmode(GPIO.BOARD)
-#adc = Adafruit_ADS1x15.ADS1115()
+adc = Adafruit_ADS1x15.ADS1115()
 GAIN = 1
 strip = Adafruit_NeoPixel(12,18,800000,10,False,50,0)
 strip.begin()
@@ -81,7 +81,7 @@ def update_volume():
     global last_volume_level
     threading.Timer(0.1, update_volume).start()
     volume = read_volume() 
-    #print("Volume is at: "+ str(volume))
+    print("Volume is at: "+ str(volume))
     first_led = 4
     led_count = 12
     volume_level = int(volume * 11) + 1
@@ -102,12 +102,12 @@ def get_volume_color(volume):
     return Color(color , 255 - color, 0)
 
 def read_volume():
-    return 5
-#     analog_value = adc.read_adc(0, gain=GAIN)
-#     return (analog_value / 33000) if analog_value < 33000 else 1
+#    return 5
+    analog_value = adc.read_adc(0, gain=GAIN)
+    return (analog_value / 33000) if analog_value < 33000 else 1
 
 
-#update_volume()
+update_volume()
 print("Device ready. Press a button!")
 GPIO.setup(13, GPIO.IN, GPIO.PUD_UP)
 GPIO.setup(15, GPIO.IN, GPIO.PUD_UP)
@@ -125,5 +125,6 @@ GPIO.add_event_detect(22,GPIO.FALLING,callback=button5_callback)
 
 #message = input("Press enter to quit\n\n") # Run until someone presses enter
 while True:
+    update_volume()
     time.sleep(1)
 GPIO.cleanup() # Clean up

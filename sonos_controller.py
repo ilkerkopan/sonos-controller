@@ -5,6 +5,7 @@ import Adafruit_ADS1x15
 from rpi_ws281x import *
 import time
 import random
+import threading
 
 GPIO.setwarnings(False)
 GPIO.setmode(GPIO.BOARD)
@@ -78,8 +79,8 @@ def play_track(track_url):
             print("Play error:", sys.exc_info()[0])
 
 def update_volume():
+    threading.Timer(0.4, update_volume).start()
     global last_volume_level
-    threading.Timer(0.1, update_volume).start()
     volume = read_volume() 
 #    print("Volume is at: "+ str(volume))
     first_led = 4
@@ -124,7 +125,7 @@ GPIO.add_event_detect(22,GPIO.FALLING,callback=button5_callback)
 
 
 #message = input("Press enter to quit\n\n") # Run until someone presses enter
-while True:
-    update_volume()
-    time.sleep(800)
-GPIO.cleanup() # Clean up
+# while True:
+#     update_volume()
+#     time.sleep(800)
+#GPIO.cleanup() # Clean up

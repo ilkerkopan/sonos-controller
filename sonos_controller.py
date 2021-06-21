@@ -23,6 +23,9 @@ baris_manco_tracks = ["x-file-cifs://raspberrypi/share/baris_manco/Ayi.mp3",
                       "x-file-cifs://raspberrypi/share/baris_manco/DomatesBiberPatlican.mp3",
                       "x-file-cifs://raspberrypi/share/baris_manco/NaneLimonKabugu.mp3"]
 mfo_tracks = ["x-file-cifs://raspberrypi/share/mfo/DeliDeli.mp3",
+              "x-file-cifs://raspberrypi/share/mfo/MFO Ali Desidero HQ.mp3",
+              "x-file-cifs://raspberrypi/share/mfo/MFO - Ele Gune Karsi.mp3",
+              "x-file-cifs://raspberrypi/share/mfo/Diday Diday Day - MFO.mp3",
                 "x-file-cifs://raspberrypi/share/mfo/VakTheRock.mp3"]
 toddler_tune_tracks = ["x-file-cifs://raspberrypi/share/cocuk/CekirdeksizDomates.mp3",
                 "x-file-cifs://raspberrypi/share/cocuk/KirmiziBalik.mp3",
@@ -36,15 +39,18 @@ toddler_tune_tracks = ["x-file-cifs://raspberrypi/share/cocuk/CekirdeksizDomates
                 "x-file-cifs://raspberrypi/share/cocuk/ThisIsTheWay.mp3",
                 "x-file-cifs://raspberrypi/share/cocuk/SesameStreetElmosSong.mp3",
                 "x-file-cifs://raspberrypi/share/cocuk/KermitAlongRainbowConnection.mp3",
+                "x-file-cifs://raspberrypi/share/cocuk/The Wheels on the Bus Go Round and Round.mp3",
                 "x-file-cifs://raspberrypi/share/cocuk/OriginalThemeSongTheMuppetShow.mp3"]
 sanat_tracks = ["x-file-cifs://raspberrypi/share/sanat/Carmen.mp3",
                 "x-file-cifs://raspberrypi/share/sanat/BrahmsHungarianDanceNo5.mp3",
                 "x-file-cifs://raspberrypi/share/sanat/VotreToastToreadorCarmen.mp3"]
 new_release_tracks = ["x-file-cifs://raspberrypi/share/new_releases/HIP-HOP.mp3",
-                      "x-file-cifs://raspberrypi/share/new_releases/BohemianRhapsodyMuppets.mp3",
-                      "x-file-cifs://raspberrypi/share/new_releases/MuppetsStayinAlive.mp3",
-                      "x-file-cifs://raspberrypi/share/new_releases/OdeToJoyMuppets.mp3",
+                      "x-file-cifs://raspberrypi/share/new_releases/The Beatles - Hey Jude.mp3",
+                      "x-file-cifs://raspberrypi/share/new_releases/The Beatles - Strawberry Fields Forever.mp3",
+                      "x-file-cifs://raspberrypi/share/new_releases/The Beatles - Yellow Submarine.mp3",
                       "x-file-cifs://raspberrypi/share/new_releases/SesameStreetFeist1-2-3-4.mp3",
+                      "x-file-cifs://raspberrypi/share/new_releases/Michael Jackson - Rock With You (Official Video).mp3",
+                      "x-file-cifs://raspberrypi/share/new_releases/Michael Jackson - Beat It (Official Video).mp3",
                       "x-file-cifs://raspberrypi/share/new_releases/CantStopTheFeelingTROLLS.mp3"]
 
 def button1_callback(channel):

@@ -26,6 +26,9 @@ mfo_tracks = ["x-file-cifs://raspberrypi/share/mfo/DeliDeli.mp3",
               "x-file-cifs://raspberrypi/share/mfo/MFO Ali Desidero HQ.mp3",
               "x-file-cifs://raspberrypi/share/mfo/MFO - Ele Gune Karsi.mp3",
               "x-file-cifs://raspberrypi/share/mfo/Diday Diday Day - MFO.mp3",
+              "x-file-cifs://raspberrypi/share/mfo/MFO-SakinGelme.mp3",
+              "x-file-cifs://raspberrypi/share/mfo/MFO-MazeretimVarAsabiyimBen.mp3",
+              "x-file-cifs://raspberrypi/share/mfo/MFO-Sude.mp3",
                 "x-file-cifs://raspberrypi/share/mfo/VakTheRock.mp3"]
 toddler_tune_tracks = ["x-file-cifs://raspberrypi/share/cocuk/CekirdeksizDomates.mp3",
                 "x-file-cifs://raspberrypi/share/cocuk/KirmiziBalik.mp3",
@@ -100,7 +103,7 @@ def update_volume():
             for i in range(volume_level, 12):
                 strip.setPixelColor((i+first_led) % led_count, Color(0, 0, 0))
             strip.show()
-            device.volume = (volume_level * 3) + 5
+            device.volume = (volume_level * 2) + 5
         except:
             print("Volume error:", sys.exc_info()[0])
 
